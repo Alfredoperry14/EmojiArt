@@ -62,9 +62,7 @@ struct ScrollingEmojis: View {
     }
 }
 
-struct PaletteChooser_Previews: PreviewProvider {
-    static var previews: some View {
-        PaletteChooser()
-            .environmentObject(PaletteStore(named: "Preview"))
-    }
+#Preview {
+    PaletteChooser()
+        .environmentObject(PaletteStore(named: "Preview"))
 }
