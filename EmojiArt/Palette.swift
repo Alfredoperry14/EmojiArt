@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Palette: Identifiable, Codable{
-    var id = UUID()
+struct Palette: Identifiable, Codable, Hashable {
     var name: String
     var emojis: String
+    var id = UUID()
     
     static var builtins: [Palette] { [
         Palette(name: "Vehicles", emojis: "🚙🚗🚘🚕🚖🏎🚚🛻🚛🚐🚓🚔🚑🚒🚀✈️🛫🛬🛩🚁🛸🚲🏍🛶⛵️🚤🛥🛳⛴🚢🚂🚝🚅🚆🚊🚉🚇🛺🚜"),
@@ -22,7 +22,6 @@ struct Palette: Identifiable, Codable{
         Palette(name: "Weather", emojis: "☀️🌤⛅️🌥☁️🌦🌧⛈🌩🌨❄️💨☔️💧💦🌊☂️🌫🌪"),
         Palette(name: "COVID", emojis: "💉🦠😷🤧🤒"),
         Palette(name: "Faces", emojis: "😀😃😄😁😆😅😂🤣🥲☺️😊😇🙂🙃😉😌😍🥰😘😗😙😚😋😛😝😜🤪🤨🧐🤓😎🥸🤩🥳😏😞😔😟😕🙁☹️😣😖😫😩🥺😢😭😤😠😡🤯😳🥶😥😓🤗🤔🤭🤫🤥😬🙄😯😧🥱😴🤮😷🤧🤒🤠")
-    ]
-    }
-    
+    ] }
 }
+

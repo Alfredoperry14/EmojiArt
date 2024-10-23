@@ -20,14 +20,11 @@ struct EmojiArt: Codable {
     
     init(json: Data) throws {
         self = try JSONDecoder().decode(EmojiArt.self, from: json)
-        
     }
     
     init() {
         
     }
-
-    
     
     private var uniqueEmojiId = 0
     
@@ -67,7 +64,7 @@ struct EmojiArt: Codable {
     private func index(of emojiId: Emoji.ID) -> Int? {
         emojis.firstIndex(where: { $0.id == emojiId })
     }
-
+    
     struct Emoji: Identifiable, Codable {
         let string: String
         var position: Position
